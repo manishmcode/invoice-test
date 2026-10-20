@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@source "../../app";
+@source "../../src";
+
+/* Tailwind v4 theme consumes Tokens.scss custom properties. Do not add hex here. */
+@theme inline {
+  --color-paper: var(--hl-paper);
+  --color-canvas: var(--hl-canvas);
+  --color-ink: var(--hl-ink);
+  --color-rule: var(--hl-rule);
+  --color-rule-strong: var(--hl-rule-strong);
+  --color-accent: var(--hl-accent);
+  --color-accent-deep: var(--hl-accent-deep);
+  --color-accent-soft: var(--hl-accent-soft);
+  --color-accent-wash: var(--hl-accent-wash);
+  --color-success: var(--hl-success);
+  --color-success-wash: var(--hl-success-wash);
+  --color-error: var(--hl-error);
+  --color-error-wash: var(--hl-error-wash);
+  --color-desk: var(--hl-desk);
+  --color-focus: var(--hl-focus);
+  --color-muted: var(--hl-muted);
+  --color-banner: var(--hl-banner);
+  --color-ink-faint: var(--hl-ink-faint);
+  --color-backdrop: var(--hl-backdrop);
+  --font-display: var(--hl-font-display);
+  --font-body: var(--hl-font-body);
+  --font-ui: var(--hl-font-ui);
+  --font-tabular: var(--hl-font-tabular);
+  --shadow-sheet: var(--hl-shadow-sheet);
+  --spacing-page: var(--hl-space-page);
+  --radius-hl: var(--hl-radius);
+  --text-caption: var(--hl-text-caption);
+  --text-label: var(--hl-text-label);
+  --text-body: var(--hl-text-body);
+  --text-title: var(--hl-text-title);
+  --text-display: var(--hl-text-display);
+  --text-total: var(--hl-text-total);
+  --breakpoint-desk: 960px;
+}

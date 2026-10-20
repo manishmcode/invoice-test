@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Build
+dist/
+build/
+out/
+.next/
+*.tsbuildinfo
+
+# Logs and tests
+logs/
+*.log
+npm-debug.log*
+coverage/
+
+# Local data
+*.sqlite
+*.sqlite3
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor and local agent state
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.agents/
+.cursor/
+**/.agents/
+**/.cursor/
+AGENTS.md
+
+# Local project notes (not part of the app)
+docs/
+PLAN.md

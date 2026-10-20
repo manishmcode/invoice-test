@@ -1,0 +1,132 @@
+.skipLink {
+  position: absolute;
+  left: 0.75rem;
+  top: -3rem;
+  z-index: 20;
+  padding: 0.4rem 0.8rem;
+  background: var(--hl-paper);
+  color: var(--hl-ink);
+}
+
+.skipLink:focus {
+  top: 0.75rem;
+}
+
+.status {
+  flex: 0 0 auto;
+  padding: 0.65rem 1.5rem 0;
+}
+
+.status :global(p) {
+  margin-bottom: 0.65rem;
+}
+
+.body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  container-type: inline-size;
+  container-name: editor;
+}
+
+.desk {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 1.25rem;
+  min-height: 100%;
+  padding: 1.25rem 1.5rem 2.5rem;
+}
+
+.editor {
+  display: grid;
+  align-content: start;
+  gap: 0.25rem;
+  min-width: 0;
+  width: 100%;
+  max-width: 44rem;
+  container-type: inline-size;
+}
+
+.preview {
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.previewBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.55rem 0.75rem;
+  min-height: 2.125rem;
+}
+
+.previewBar :global(ul) {
+  margin-left: auto;
+}
+
+.previewLabel {
+  margin: 0;
+  color: var(--hl-muted);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.preview :global(#invoice-sheet) {
+  min-width: 0;
+}
+
+@container editor (min-width: 48rem) {
+  .desk {
+    grid-template-columns: minmax(16rem, 1fr) minmax(20rem, 1fr);
+    align-items: start;
+  }
+
+  .preview {
+    position: sticky;
+    top: 1.25rem;
+    align-self: start;
+    max-height: calc(100cqh - 2.5rem);
+  }
+
+  .preview :global(#invoice-sheet) {
+    max-height: calc(100cqh - 5.5rem);
+    overflow: auto;
+  }
+}
+
+@media (max-width: 719px) {
+  .desk {
+    padding: 1rem 1rem 2rem;
+  }
+}
+
+.missing {
+  max-width: 36rem;
+  padding: 2.5rem 1.5rem;
+}
+
+.missingTitle {
+  margin: 0 0 0.6rem;
+  font-family: var(--hl-font-display);
+  font-size: var(--hl-text-title);
+  font-weight: 600;
+}
+
+.missingCopy {
+  margin: 0 0 1.25rem;
+  color: var(--hl-muted);
+  font-size: var(--hl-text-body);
+}
+
+.missingActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}

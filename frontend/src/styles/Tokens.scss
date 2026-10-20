@@ -1,0 +1,46 @@
+/* Hearth & Ledger tokens — red on white paper.
+ * Hex lives here only. Components use --hl-*.
+ */
+
+$tokens: (
+  "hl-desk": #f7f4f2,
+  "hl-canvas": #fbf9f8,
+  "hl-paper": #ffffff,
+  "hl-ink": #1a1414,
+  "hl-muted": #6b6161,
+  "hl-rule": #e8e1dd,
+  "hl-rule-strong": #d4cbc6,
+  "hl-accent": #c41e3a,
+  "hl-accent-deep": #9e1730,
+  "hl-accent-soft": #f8dce1,
+  "hl-accent-wash": #fdf2f4,
+  "hl-success": #0f9a4b,
+  "hl-success-wash": #eefef4,
+  "hl-error": #9e1730,
+  "hl-error-wash": #fdf2f4,
+  "hl-focus": #c41e3a,
+  "hl-banner": #fdf2f4,
+  "hl-ink-faint": #1a14140f,
+  "hl-backdrop": #1a141473,
+  "hl-space-page": clamp(1.25rem, 3.2vw, 2.5rem),
+  "hl-radius": 8px,
+  "hl-text-caption": 0.75rem,
+  "hl-text-label": 0.8125rem,
+  "hl-text-body": 0.875rem,
+  "hl-text-title": 1.25rem,
+  "hl-text-display": 1.5rem,
+  "hl-text-total": 1.375rem,
+);
+
+:root {
+  @each $name, $value in $tokens {
+    --#{$name}: #{$value};
+  }
+
+  --hl-shadow-sheet: 0 0 0 1px var(--hl-rule);
+  --hl-chrome-height: 4.0625rem;
+  --hl-font-display: var(--font-nunito), "Nunito Sans", sans-serif;
+  --hl-font-body: var(--font-nunito), "Nunito Sans", sans-serif;
+  --hl-font-ui: var(--font-nunito), "Nunito Sans", sans-serif;
+  --hl-font-tabular: var(--font-nunito), "Nunito Sans", sans-serif;
+}

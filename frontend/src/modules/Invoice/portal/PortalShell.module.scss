@@ -1,0 +1,25 @@
+.shell {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--hl-desk);
+}
+
+.workspace {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 auto;
+  flex-direction: column;
+  overflow: hidden;
+  container-type: inline-size;
+  container-name: workspace;
+}
+
+@media print {
+  .shell,
+  .workspace {
+    display: block;
+    height: auto;
+    overflow: visible;
+  }
+}
